@@ -1,0 +1,1193 @@
+2024-07-03 11:27:39,997 INFO    StreamThr :232376 [internal.py:wandb_internal():86] W&B internal server running at pid: 232376, started at: 2024-07-03 11:27:39.991878
+2024-07-03 11:27:39,999 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status
+2024-07-03 11:27:40,010 INFO    WriterThread:232376 [datastore.py:open_for_write():87] open: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/run-8ak2jebf.wandb
+2024-07-03 11:27:40,015 DEBUG   SenderThread:232376 [sender.py:send():378] send: header
+2024-07-03 11:27:40,251 DEBUG   SenderThread:232376 [sender.py:send():378] send: run
+2024-07-03 11:27:40,286 DEBUG   SenderThread:232376 [gitlib.py:_init_repo():56] git repository is invalid
+2024-07-03 11:27:40,541 INFO    SenderThread:232376 [dir_watcher.py:__init__():211] watching files in: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files
+2024-07-03 11:27:40,541 INFO    SenderThread:232376 [sender.py:_start_run_threads():1099] run started: 8ak2jebf with start time 1720031259.993976
+2024-07-03 11:27:40,573 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: check_version
+2024-07-03 11:27:40,574 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: check_version
+2024-07-03 11:27:40,692 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: run_start
+2024-07-03 11:27:40,710 DEBUG   HandlerThread:232376 [system_info.py:__init__():26] System info init
+2024-07-03 11:27:40,710 DEBUG   HandlerThread:232376 [system_info.py:__init__():41] System info init done
+2024-07-03 11:27:40,711 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:40,711 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:40,711 INFO    HandlerThread:232376 [system_monitor.py:probe():214] Collecting system info
+2024-07-03 11:27:40,712 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:40,713 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:40,714 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:40,715 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:27:40,716 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started network monitoring
+2024-07-03 11:27:40,820 DEBUG   HandlerThread:232376 [system_info.py:probe():150] Probing system
+2024-07-03 11:27:40,829 DEBUG   HandlerThread:232376 [gitlib.py:_init_repo():56] git repository is invalid
+2024-07-03 11:27:40,830 DEBUG   HandlerThread:232376 [system_info.py:probe():198] Probing system done
+2024-07-03 11:27:40,830 DEBUG   HandlerThread:232376 [system_monitor.py:probe():223] {'os': 'Linux-5.14.21-150400.24.81_12.0.87-cray_shasta_c-x86_64-with-glibc2.31', 'python': '3.11.5', 'heartbeatAt': '2024-07-03T18:27:40.820462', 'startedAt': '2024-07-03T18:27:39.905559', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'host': 'nid200264', 'username': 'sihany', 'executable': '/global/common/software/desi/users/sihany/anaconda3/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 2480.2583671875, 'min': 1500.0, 'max': 2450.0}, 'cpu_freq_per_core': [{'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3138.663, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3107.638, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3142.566, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 3013.41, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}, {'current': 2450.0, 'min': 1500.0, 'max': 2450.0}], 'disk': {'/': {'total': 251.66545486450195, 'used': 1.1329154968261719}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 503.3309135437012}}
+2024-07-03 11:27:40,830 INFO    HandlerThread:232376 [system_monitor.py:probe():224] Finished collecting system info
+2024-07-03 11:27:40,830 INFO    HandlerThread:232376 [system_monitor.py:probe():227] Publishing system info
+2024-07-03 11:27:40,831 DEBUG   HandlerThread:232376 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-07-03 11:27:41,545 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_created():271] file/dir created: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/conda-environment.yaml
+2024-07-03 11:27:49,227 DEBUG   HandlerThread:232376 [system_info.py:_save_conda():219] Saving conda packages done
+2024-07-03 11:27:49,236 INFO    HandlerThread:232376 [system_monitor.py:probe():229] Finished publishing system info
+2024-07-03 11:27:49,275 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:27:49,276 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 11:27:49,276 DEBUG   SenderThread:232376 [sender.py:send():378] send: files
+2024-07-03 11:27:49,277 INFO    SenderThread:232376 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-07-03 11:27:49,657 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/conda-environment.yaml
+2024-07-03 11:27:49,657 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_created():271] file/dir created: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/wandb-metadata.json
+2024-07-03 11:27:49,742 INFO    wandb-upload_0:232376 [upload_job.py:push():131] Uploaded file /tmp/tmpi5wmo06zwandb/04mv40qq-wandb-metadata.json
+2024-07-03 11:27:50,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: python_packages
+2024-07-03 11:27:50,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:27:50,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: python_packages
+2024-07-03 11:27:50,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:27:50,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:27:50,504 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:50,505 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:50,505 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:50,505 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:50,506 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:50,506 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:50,506 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:50,507 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:50,576 DEBUG   SenderThread:232376 [sender.py:send():378] send: telemetry
+2024-07-03 11:27:50,662 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_created():271] file/dir created: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/requirements.txt
+2024-07-03 11:27:51,290 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:51,290 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:27:51,290 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined network monitor
+2024-07-03 11:27:51,291 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:51,292 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:51,292 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:51,292 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:51,295 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:51,295 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:51,296 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:51,296 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:51,296 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:51,296 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:51,297 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:51,298 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:51,298 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:51,299 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:51,299 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:51,302 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:52,163 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:52,163 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:52,164 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:52,164 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:52,164 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:52,164 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:52,165 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:52,165 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:52,166 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:52,166 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:52,168 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:52,168 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:52,168 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:52,169 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:52,169 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:52,173 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:53,110 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:53,110 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:53,111 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:53,111 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:53,111 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:53,111 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:53,112 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:53,112 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:53,113 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:53,113 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:53,114 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:53,115 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:53,115 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:53,115 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:53,116 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:53,116 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:53,963 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:53,963 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:53,964 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:53,964 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:53,965 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:53,965 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:53,965 DEBUG   SenderThread:232376 [sender.py:send():378] send: telemetry
+2024-07-03 11:27:53,965 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:53,966 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:53,967 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:53,968 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:53,968 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:53,969 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:53,969 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:53,969 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:53,970 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:53,970 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:54,780 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:54,781 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:54,781 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:54,781 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:54,782 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:54,782 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:27:54,782 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:54,783 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:54,784 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:54,785 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:54,786 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:54,789 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:54,789 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:54,789 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:27:54,790 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:54,790 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:54,790 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:54,791 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:54,791 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:55,567 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:55,568 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:27:55,568 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:55,569 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:55,569 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:55,569 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:55,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:27:55,570 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:55,570 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:27:55,571 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:55,572 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:27:55,572 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:55,573 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:27:55,573 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:27:55,573 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:27:55,573 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:27:55,574 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:27:56,359 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:27:56,360 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:27:56,360 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:27:56,361 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:27:56,361 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:27:56,366 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:56,367 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:27:56,368 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:56,369 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:27:56,369 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:27:56,370 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:56,371 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:27:56,372 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:56,373 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:27:56,373 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:27:56,374 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started network monitoring
+2024-07-03 11:28:01,375 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:03,760 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_created():271] file/dir created: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:05,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:28:05,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:28:05,393 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:28:05,777 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:06,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:11,571 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:11,825 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/config.yaml
+2024-07-03 11:28:16,672 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:20,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:28:20,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:28:20,436 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:28:22,479 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:25,951 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:27,512 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:27,967 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:30,077 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:32,094 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:32,568 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:34,110 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:35,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:28:35,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:28:35,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:28:36,130 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:37,624 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:38,147 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:40,165 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:42,179 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:42,681 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:44,211 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:46,229 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:47,739 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:48,246 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:50,265 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:50,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:28:50,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:28:50,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:28:52,282 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:52,795 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:54,299 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:56,316 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:28:56,375 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:28:56,379 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:28:57,851 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:28:58,552 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:00,569 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:02,658 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:02,907 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:03,675 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:05,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:29:05,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:29:05,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:29:05,700 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:07,715 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:07,963 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:09,732 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:11,748 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:13,020 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:13,767 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:15,785 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:17,802 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:18,078 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:19,819 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:20,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:29:20,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:29:20,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:29:21,847 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:23,134 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:23,864 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:25,881 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:26,381 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:29:27,898 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:28,190 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:29,921 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:31,949 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:33,248 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:33,966 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:35,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:29:35,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:29:35,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:29:35,983 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:37,999 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:38,312 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:40,016 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:42,032 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:43,377 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:44,048 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:46,065 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:48,080 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:48,445 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:50,096 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:50,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:29:50,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:29:50,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:29:52,112 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:53,512 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:29:54,129 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:56,143 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:56,387 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:29:58,160 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:29:58,580 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:00,186 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:02,202 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:03,647 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:04,219 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:05,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:30:05,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:30:05,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:30:06,236 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:08,249 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:09,062 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:14,063 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:18,333 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:19,937 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:20,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:30:20,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:30:20,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:30:25,545 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:26,387 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:30:28,448 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:30,882 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:35,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:30:35,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:30:35,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:30:36,540 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:38,538 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:41,745 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:47,610 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:48,619 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:50,393 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:30:50,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:30:50,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:30:53,562 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:30:56,389 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:30:57,686 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:30:59,417 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:04,417 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:05,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:31:05,394 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:31:05,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:31:07,770 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:31:10,308 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:15,308 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:17,902 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:31:20,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:31:20,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:31:20,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:31:20,513 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:25,514 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:26,393 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:31:27,992 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:31:31,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:35,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:31:35,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:31:35,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:31:36,948 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:38,232 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:31:41,949 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:46,991 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:48,312 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:31:50,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:31:50,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:31:50,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:31:52,568 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:56,394 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:31:58,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:31:58,439 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:03,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:05,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:32:05,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:32:05,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:32:08,520 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:08,777 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:13,777 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:18,597 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:19,636 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:20,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:32:20,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:32:20,395 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:32:25,584 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:26,396 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:32:28,679 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:31,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:35,394 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:32:35,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:32:35,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:32:36,486 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:37,752 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:41,487 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:45,815 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:47,312 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:50,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:32:50,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:32:50,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:32:52,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:32:55,896 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:32:56,398 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:32:58,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:03,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:05,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:33:05,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:33:05,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:33:06,126 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:08,517 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:13,517 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:16,220 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:18,756 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:20,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:33:20,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:33:20,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:33:24,521 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:26,303 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:26,400 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:33:30,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:35,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:33:35,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:33:35,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:33:35,528 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:36,515 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:40,528 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:45,644 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:46,594 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:50,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:33:50,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:33:50,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:33:51,504 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:33:56,406 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:33:56,678 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:33:57,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:02,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:05,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:34:05,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:34:05,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:34:05,749 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:07,562 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:12,562 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:15,833 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:18,538 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:20,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:34:20,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:34:20,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:34:24,441 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:25,915 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:26,405 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:34:30,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:35,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:34:35,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:34:35,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:34:35,478 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:35,996 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:40,479 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:46,180 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:46,297 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:50,395 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:34:50,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:34:50,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:34:51,498 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:34:56,384 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:34:56,407 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:34:57,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:02,409 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:05,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:35:05,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:35:05,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:35:06,464 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:07,509 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:12,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:16,558 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:17,736 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:20,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:35:20,396 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:35:20,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:35:23,540 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:26,409 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:35:26,847 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:29,411 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:34,471 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:35,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:35:35,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:35:35,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:35:35,925 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:39,550 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:43,991 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:45,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:50,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:35:50,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:35:50,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:35:50,491 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:54,067 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:35:56,304 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:35:56,412 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:36:01,414 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:04,151 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:05,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:36:05,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:36:05,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:36:06,494 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:11,494 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:14,239 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:17,117 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:20,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:36:20,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:36:20,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:36:22,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:24,459 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:26,417 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:36:28,418 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:33,829 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:34,695 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:35,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:36:35,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:36:35,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:36:39,572 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:43,768 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:44,760 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:49,761 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:50,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:36:50,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:36:50,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:36:53,849 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:36:55,670 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:36:56,416 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:37:01,418 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:03,938 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:05,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:37:05,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:37:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:37:06,535 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:11,536 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:14,034 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:17,343 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:20,396 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:37:20,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:37:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:37:23,188 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:24,130 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:26,418 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:37:28,420 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:33,925 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:34,211 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:35,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:37:35,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:37:35,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:37:39,529 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:44,292 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:44,815 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:49,816 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:50,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:37:50,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:37:50,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:37:54,412 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:37:55,720 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:37:56,421 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:38:01,423 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:04,545 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:05,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:38:05,397 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:38:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:38:06,504 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:12,452 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:12,622 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:17,453 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:20,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:38:20,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:38:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:38:22,703 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:23,294 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:26,423 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:38:28,425 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:31,782 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:34,116 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:35,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:38:35,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:38:35,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:38:39,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:41,881 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:44,935 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:49,936 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:50,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:38:50,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:38:50,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:38:51,965 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:38:55,921 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:38:56,425 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:39:01,700 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:02,056 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:05,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:39:05,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:39:05,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:39:07,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:12,339 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:12,608 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:17,609 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:20,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:39:20,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:39:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:39:22,436 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:23,523 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:26,430 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:39:29,432 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:32,529 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:34,501 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:35,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:39:35,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:39:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:39:39,517 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:42,618 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:45,287 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:50,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:39:50,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:39:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:39:50,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:52,715 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:39:55,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:39:56,430 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:40:01,030 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:01,800 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:40:05,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:40:05,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:40:05,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:40:06,565 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:11,896 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:40:11,900 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:16,901 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:20,397 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:40:20,398 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:40:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:40:21,979 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:40:22,573 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:26,431 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:40:28,433 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:32,061 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:40:33,607 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:35,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:40:35,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:40:35,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:40:39,423 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:40,134 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:40:44,424 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:49,425 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:49,682 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:40:49,682 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:40:49,682 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:40:49,683 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:40:49,684 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:40:49,684 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:40:49,684 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:40:50,420 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:40:50,421 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:40:50,422 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined network monitor
+2024-07-03 11:40:50,422 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:40:50,423 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:40:50,424 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:40:50,425 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:40:54,596 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:40:57,455 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:40:57,456 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:40:57,456 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:40:57,456 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:40:57,457 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:40:57,457 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:40:57,458 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:40:57,460 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:40:57,460 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started network monitoring
+2024-07-03 11:40:59,597 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:02,637 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:04,612 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:04,654 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:05,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:41:05,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:41:05,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:41:06,672 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:08,689 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:09,662 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:10,710 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:12,728 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:14,710 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:14,746 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:16,760 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:18,777 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:19,759 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:20,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:41:20,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:41:20,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:41:21,459 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:22,467 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:24,807 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:24,867 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:25,876 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:27,900 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:29,856 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:29,918 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:31,940 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:33,957 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:34,904 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:35,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:41:35,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:41:35,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:41:35,997 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:38,014 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:39,952 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:40,085 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:42,102 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:44,123 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:45,001 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:46,297 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:48,315 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:50,050 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:41:50,329 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:50,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:41:50,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:41:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:41:52,456 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:53,049 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:41:53,050 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:41:53,050 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:41:53,050 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:41:53,051 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:41:53,052 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:41:53,052 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:41:53,052 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:41:53,801 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:41:53,802 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:41:53,803 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined network monitor
+2024-07-03 11:41:53,805 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:41:54,493 INFO    Thread-12 :232376 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_112739-8ak2jebf/files/output.log
+2024-07-03 11:41:55,806 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:00,807 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:05,398 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:42:05,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:42:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:42:06,525 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:11,526 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:16,526 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:20,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:42:20,399 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:42:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:42:21,565 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:26,566 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:31,566 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:35,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:42:35,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:42:35,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:42:37,509 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:42,509 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:47,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:50,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:42:50,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:42:50,440 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:42:52,553 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:42:57,553 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:02,554 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:05,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:43:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:43:05,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:43:07,580 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:12,580 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:17,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:20,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:43:20,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:43:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:43:23,541 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:28,541 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:33,542 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:35,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:43:35,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:43:35,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:43:38,548 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:43,548 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:48,550 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:50,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:43:50,400 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:43:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:43:54,537 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:43:59,537 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:04,538 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:05,399 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:44:05,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:44:05,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:44:09,589 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:14,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:19,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:44:20,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:44:20,440 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:44:25,531 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:30,532 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:33,710 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:44:33,710 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:44:33,710 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:44:33,711 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:44:33,711 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:44:33,712 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:44:33,713 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:44:33,714 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:44:33,714 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started network monitoring
+2024-07-03 11:44:33,890 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:44:33,891 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:44:33,891 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:44:33,892 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:44:33,892 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:44:33,892 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:44:33,893 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:44:33,893 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:44:34,658 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:44:34,658 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:44:34,658 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined network monitor
+2024-07-03 11:44:34,660 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:44:35,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:44:35,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:44:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:44:35,568 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:40,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:45,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:50,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:44:50,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:44:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:44:51,518 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:55,536 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: resume
+2024-07-03 11:44:55,537 INFO    HandlerThread:232376 [handler.py:handle_request_resume():699] starting system metrics thread
+2024-07-03 11:44:55,537 INFO    HandlerThread:232376 [system_monitor.py:start():194] Starting system monitor
+2024-07-03 11:44:55,538 INFO    SystemMonitor:232376 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-07-03 11:44:55,538 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started cpu monitoring
+2024-07-03 11:44:55,539 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started disk monitoring
+2024-07-03 11:44:55,540 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started gpu monitoring
+2024-07-03 11:44:55,541 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started memory monitoring
+2024-07-03 11:44:55,541 INFO    SystemMonitor:232376 [interfaces.py:start():190] Started network monitoring
+2024-07-03 11:44:56,519 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:44:57,303 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: pause
+2024-07-03 11:44:57,303 INFO    HandlerThread:232376 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-07-03 11:44:57,303 INFO    HandlerThread:232376 [system_monitor.py:finish():203] Stopping system monitor
+2024-07-03 11:44:57,304 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined cpu monitor
+2024-07-03 11:44:57,304 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined disk monitor
+2024-07-03 11:44:57,304 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-07-03 11:44:57,305 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-07-03 11:44:57,305 DEBUG   SystemMonitor:232376 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-07-03 11:44:58,070 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined gpu monitor
+2024-07-03 11:44:58,071 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined memory monitor
+2024-07-03 11:44:58,071 INFO    HandlerThread:232376 [interfaces.py:finish():202] Joined network monitor
+2024-07-03 11:44:58,073 DEBUG   SenderThread:232376 [sender.py:send():378] send: stats
+2024-07-03 11:45:02,075 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:45:05,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:45:05,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:45:07,509 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:12,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:17,511 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:20,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:45:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:45:20,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:45:22,574 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:27,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:32,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:35,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:45:35,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:45:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:45:38,515 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:43,515 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:48,516 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:50,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:45:50,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:45:50,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:45:53,580 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:45:58,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:03,582 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:05,400 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:46:05,401 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:46:05,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:46:09,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:14,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:19,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:46:20,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:46:20,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:46:24,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:29,591 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:34,591 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:46:35,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:46:35,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:46:40,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:45,568 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:46:50,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:46:50,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:46:50,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:46:55,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:00,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:05,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:47:05,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:47:05,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:47:06,545 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:11,546 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:16,546 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:47:20,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:47:20,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:47:22,509 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:27,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:32,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:47:35,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:47:35,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:47:38,492 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:43,493 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:48,493 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:50,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:47:50,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:47:50,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:47:53,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:47:58,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:03,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:05,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:48:05,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:48:05,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:48:09,573 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:14,574 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:19,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:20,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:48:20,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:48:20,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:48:25,514 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:30,515 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:35,401 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:48:35,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:48:35,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:48:35,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:40,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:45,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:50,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:48:50,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:48:50,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:48:51,556 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:48:56,557 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:01,558 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:05,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:49:05,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:49:05,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:49:06,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:11,582 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:16,582 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:20,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:49:20,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:49:20,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:49:22,510 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:27,511 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:32,512 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:35,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:49:35,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:49:35,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:49:37,547 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:42,547 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:47,548 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:50,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:49:50,402 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:49:50,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:49:53,496 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:49:58,497 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:03,498 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:05,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:50:05,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:50:05,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:50:08,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:13,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:18,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:20,402 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:50:20,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:50:20,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:50:23,622 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:28,622 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:33,623 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:35,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:50:35,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:50:35,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:50:39,574 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:44,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:49,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:50,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:50:50,403 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:50:50,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:50:54,584 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:50:59,585 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:04,586 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:05,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:51:05,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:51:05,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:51:10,557 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:15,558 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:20,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:51:20,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:51:20,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:51:21,546 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:26,547 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:31,548 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:35,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:51:35,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:51:35,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:51:37,514 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:42,514 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:47,515 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:50,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:51:50,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:51:50,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:51:52,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:51:57,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:02,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:05,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:52:05,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:52:05,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:52:08,512 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:13,513 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:18,513 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:20,403 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:52:20,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:52:20,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:52:24,483 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:29,484 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:34,485 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:35,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:52:35,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:52:35,444 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:52:39,516 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:44,517 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:49,518 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:50,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:52:50,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:52:50,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:52:54,573 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:52:59,574 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:04,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:05,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:53:05,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:53:05,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:53:09,587 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:14,587 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:19,588 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:20,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:53:20,404 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:53:20,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:53:25,562 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:30,563 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:35,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:53:35,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:53:35,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:53:35,566 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:40,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:45,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:50,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:53:50,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:53:50,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:53:51,566 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:53:56,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:01,567 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:05,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:54:05,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:54:05,452 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:54:06,574 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:11,575 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:16,576 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:20,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:54:20,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:54:20,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:54:21,585 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:26,585 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:31,586 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:35,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:54:35,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:54:35,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:54:37,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:42,582 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:47,583 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:50,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:54:50,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:54:50,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:54:53,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:54:58,569 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:03,570 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:05,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:55:05,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:55:05,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:55:09,557 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:14,558 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:19,559 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:20,404 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:55:20,405 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:55:20,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:55:25,519 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:30,520 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:35,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:55:35,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:55:35,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:55:35,558 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:40,559 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:45,560 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:50,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:55:50,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:55:50,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:55:51,542 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:55:56,543 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:01,544 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:05,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:56:05,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:56:05,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:56:06,577 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:11,578 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:16,579 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:20,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:56:20,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:56:20,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:56:22,497 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:27,498 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:32,499 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:35,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:56:35,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:56:35,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:56:37,642 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:42,643 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:47,643 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:50,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:56:50,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:56:50,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:56:53,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:56:58,581 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:03,582 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:05,405 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:57:05,406 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:57:05,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:57:09,556 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:14,557 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:19,558 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:20,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:57:20,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:57:20,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:57:25,525 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:30,526 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:35,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:57:35,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:57:35,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:57:35,588 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:40,588 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:45,589 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:50,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:57:50,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:57:50,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:57:50,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:57:55,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:00,591 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:05,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:58:05,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:58:05,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:58:06,513 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:11,513 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:16,514 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:20,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:58:20,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:58:20,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:58:21,532 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:26,532 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:31,533 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:35,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:58:35,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:58:35,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:58:36,590 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:41,591 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:46,592 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:50,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:58:50,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:58:50,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:58:52,506 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:58:57,507 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:02,508 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:05,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:59:05,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:59:05,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:59:08,500 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:13,501 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:18,502 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:20,406 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:59:20,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:59:20,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:59:23,529 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:28,530 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:33,531 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:35,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:59:35,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:59:35,408 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:59:38,564 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:43,565 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:48,565 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:50,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 11:59:50,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 11:59:50,408 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 11:59:54,561 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 11:59:59,562 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:04,563 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:05,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 12:00:05,407 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 12:00:05,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 12:00:09,593 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:14,593 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:19,594 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:20,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 12:00:20,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 12:00:20,408 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 12:00:25,524 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:30,525 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:35,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 12:00:35,408 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 12:00:35,408 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 12:00:36,516 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:41,516 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:46,517 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:50,407 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: stop_status
+2024-07-03 12:00:50,408 DEBUG   SenderThread:232376 [sender.py:send_request():405] send_request: stop_status
+2024-07-03 12:00:50,448 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 12:00:51,536 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:00:56,537 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:01:01,537 DEBUG   HandlerThread:232376 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 12:01:05,030 INFO    MainThread:232376 [internal.py:handle_exit():76] Internal process exited

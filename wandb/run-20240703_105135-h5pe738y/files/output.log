@@ -1,0 +1,6 @@
+/global/common/software/desi/users/sihany/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+900: 2.5228116512298584, delta_t: 12.353
+900: 2.523236036300659, delta_t: 18.144
+901: 4.154143810272217, delta_t: 14.776
+901: 4.16057825088501, delta_t: 9.171
