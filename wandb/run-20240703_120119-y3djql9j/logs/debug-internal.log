@@ -12522,3 +12522,217 @@
 2024-07-03 16:40:44,720 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
 2024-07-03 16:40:46,285 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
 2024-07-03 16:40:46,581 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:40:49,721 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:40:52,391 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:40:54,363 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:40:55,512 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:40:57,392 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:00,413 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:01,135 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:01,581 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:41:06,136 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:07,393 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:08,494 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:09,554 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:41:11,555 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:12,394 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:16,565 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:16,581 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:41:17,060 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:22,396 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:22,439 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:22,619 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:27,396 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:27,439 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:29,681 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:31,581 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:41:32,857 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:37,398 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:37,901 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:38,280 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:39,556 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:41:42,398 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:43,557 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:45,974 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:46,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:41:48,637 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:52,038 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:41:52,400 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:54,076 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:41:57,400 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:41:59,475 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:00,539 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:01,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:42:04,476 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:07,402 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:08,614 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:09,558 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:42:09,559 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:12,402 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:14,100 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:15,387 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:16,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:42:20,388 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:22,306 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:22,404 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:25,852 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:27,405 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:30,388 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:31,219 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:31,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:42:36,612 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:37,406 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:38,469 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:39,561 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:42:42,406 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:42,562 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:44,526 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:46,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:42:48,012 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:52,408 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:52,632 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:42:53,534 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:57,409 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:42:58,992 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:42:59,688 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:01,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:43:03,993 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:07,410 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:07,756 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:09,552 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:09,563 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:43:12,411 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:13,872 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:14,902 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:16,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:43:19,903 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:21,966 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:22,412 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:25,307 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:27,413 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:30,035 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:30,757 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:31,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:43:36,129 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:36,159 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:37,414 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:39,565 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:43:41,567 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:42,415 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:44,212 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:46,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:43:47,536 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:52,416 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:52,491 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:43:52,972 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:57,417 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:43:58,300 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:43:58,587 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:01,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:44:03,301 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:06,671 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:07,418 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:08,784 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:09,570 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:44:12,419 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:13,733 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:14,172 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:16,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:44:19,172 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:21,801 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:22,420 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:24,554 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:27,421 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:27,857 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:29,923 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:31,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:44:35,360 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:35,965 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:37,422 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:39,569 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:44:40,571 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:42,423 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:44,037 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:45,713 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:46,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:44:50,318 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:44:51,213 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:52,425 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:56,213 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:44:57,425 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:44:58,556 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:01,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:45:01,642 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:06,636 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:07,167 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:07,427 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:09,572 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:45:12,428 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:12,610 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:14,118 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:16,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:45:17,611 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:20,308 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:22,429 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:23,200 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:27,430 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:28,379 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:28,521 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:31,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:45:33,522 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:36,448 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:37,431 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:38,907 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:39,574 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:45:42,432 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:42,517 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:44,308 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:46,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:45:49,786 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:49,799 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:45:52,433 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:54,787 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:45:57,434 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:45:57,872 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:00,265 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:01,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:46:05,956 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:06,040 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:07,435 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:09,576 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:46:11,578 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:12,436 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:14,033 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:16,583 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:46:16,923 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:20,354 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:22,336 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:22,437 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:27,437 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:27,807 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:28,451 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:31,584 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:46:32,808 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:36,606 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:37,439 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:38,208 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:39,581 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:46:42,439 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:43,602 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:44,706 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:46,584 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:46:48,603 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:49,750 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:52,441 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:54,049 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:46:57,447 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:46:57,832 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:46:59,384 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:47:01,584 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: internal_messages
+2024-07-03 16:47:04,909 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:47:05,895 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:47:07,448 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
+2024-07-03 16:47:09,581 DEBUG   SenderThread:241884 [sender.py:send():378] send: stats
+2024-07-03 16:47:10,582 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: status_report
+2024-07-03 16:47:11,945 INFO    Thread-12 :241884 [dir_watcher.py:_on_file_modified():288] file/dir modified: /global/u1/s/sihany/galaxydiffuser/wandb/run-20240703_120119-y3djql9j/files/output.log
+2024-07-03 16:47:12,449 DEBUG   HandlerThread:241884 [handler.py:handle_request():146] handle_request: keepalive
