@@ -16,9 +16,9 @@ from PIL import Image
 import numpy as np
 from tqdm import tqdm
 from einops import rearrange
-from tqdm import tqdm
 
 from time import time
+import wandb
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -395,7 +395,7 @@ class GaussianDiffusion(nn.Module):
         b = shape[0]
         img = torch.randn(shape, device=device)
 
-        for i in tqdm(reversed(range(0, self.num_timesteps)), desc='sampling loop time step', total=self.num_timesteps):
+        for i in tqdm(reversed(range(0, self.num_timesteps)), desc='sampling loop time step', total=self.num_timesteps, leave=True, position=0):
             img = self.p_sample(img, torch.full((b,), i, device=device, dtype=torch.long))
         return img
 
@@ -416,7 +416,7 @@ class GaussianDiffusion(nn.Module):
         xt1, xt2 = map(lambda x: self.q_sample(x, t=t_batched), (x1, x2))
 
         img = (1 - lam) * xt1 + lam * xt2
-        for i in tqdm(reversed(range(0, t)), desc='interpolation sample time step', total=t):
+        for i in tqdm(reversed(range(0, t)), desc='interpolation sample time step', total=t, leave=True, position=0):
             img = self.p_sample(img, torch.full((b,), i, device=device, dtype=torch.long))
 
         return img
@@ -433,7 +433,7 @@ class GaussianDiffusion(nn.Module):
         else:
             zs = self.q_sample(x_start, torch.tensor([t] * batch_size).to(device))
         ps = zs
-        for i in tqdm(reversed(range(0, t)), desc='domain transfer time step', total=t):
+        for i in tqdm(reversed(range(0, t)), desc='domain transfer time step', total=t, leave=True, position=0):
             if mask is not None:
                 zs = self.q_sample(x_start, torch.tensor([i] * batch_size).to(device))
                 ps = torch.where(mask == False, zs, ps)
@@ -591,7 +591,7 @@ class Trainer(object):
     def train(self):
 
         t1 = time()
-        loop = tqdm(range(self.train_num_steps), disable= False)
+        loop = tqdm(range(self.train_num_steps), disable= False, position=0, leave = True)
         for _ in loop:
         # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
@@ -611,6 +611,7 @@ class Trainer(object):
                 # print(loss)
                 # print(loss.item())
                 loop.set_description(f'loss = {loss.item()}')
+                wandb.log({'loss': loss.item(), 'step': self.step})
 
             self.opt.step()
             self.lr_scheduler.step()
@@ -623,10 +624,16 @@ class Trainer(object):
                 batches = num_to_groups(18, self.batch_size)
                 all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n), batches))
                 all_images = torch.cat(all_images_list, dim=0)
-                all_images = torch.flip(all_images, dims=[1]) # map channels correctly for imout
-                all_images = all_images + 1
-                all_images = list(map(lambda x: (x - x.min())/(x.max() - x.min()), all_images))
+                all_images = (all_images + 1)/2
+                all_images = torch.flip(all_images, dims=[1])*255 # map channels correctly for imout
+                all_images = all_images.round()
+                #                 all_images = all_images + 1
+                #                 all_images = list(map(lambda x: (x - x.min())/(x.max() - x.min()), all_images))
+
+                #                 # all_images = list(map(lambda x: (x - 0)/(255 - 0), all_images))
+                #                 all_images = torch.flip(all_images, dims=[1])*255 # map channels correctly for imout
                 utils.save_image(all_images, str(self.logdir / f'{self.step:08d}-sample.jpg'), nrow=6)
+                wandb.log({"test_samples": [wandb.Image(img) for img in all_images], "step": self.step}),
 
             if self.step != 0 and self.step % self.save_every == 0:
                 self.save(self.step)
