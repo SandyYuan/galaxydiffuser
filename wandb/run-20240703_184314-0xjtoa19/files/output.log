@@ -1,6 +1,0 @@
-07/03/2024 18:43:25 - INFO - __main__ - ***** Running training *****
-07/03/2024 18:43:25 - INFO - __main__ -   Num examples = 13466
-07/03/2024 18:43:25 - INFO - __main__ -   Num Epochs = 50
-07/03/2024 18:43:25 - INFO - __main__ -   Instantaneous batch size per device = 16
-07/03/2024 18:43:25 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
-07/03/2024 18:43:25 - INFO - __main__ -   Gradient Accumulation steps = 1
