@@ -8,7 +8,7 @@ from functools import partial
 
 from torch.utils import data
 from pathlib import Path
-from torch.optim import Adam
+from torch.optim import AdamW, lr_scheduler
 from torchvision import transforms, utils
 from astropy.io import fits
 from PIL import Image
@@ -16,6 +16,7 @@ from PIL import Image
 import numpy as np
 from tqdm import tqdm
 from einops import rearrange
+from tqdm import tqdm
 
 from time import time
 
@@ -530,14 +531,14 @@ class Trainer(object):
         fp16 = False,
         step_start_ema = 2000,
         update_ema_every = 10,
-        rank = [0, 1, 2],
+        # rank = [0, 1, 2],
         num_workers = 128,
         save_every = 5000,
         sample_every = 5000,
         logdir = './logs',
     ):
         super().__init__()
-        self.model = torch.nn.DataParallel(diffusion_model, device_ids=rank)
+        self.model = torch.nn.DataParallel(diffusion_model, device_ids = [0])
         self.ema = EMA(ema_decay)
         self.ema_model = copy.deepcopy(self.model)
         self.update_ema_every = update_ema_every
@@ -555,8 +556,9 @@ class Trainer(object):
         self.logdir.mkdir(exist_ok = True)
 
         self.ds = Galaxies(folder, image_size, minmaxnorms=(0, 255))
-        self.dl = cycle(data.DataLoader(self.ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers))
-        self.opt = Adam(diffusion_model.parameters(), lr=train_lr)
+        self.dl = cycle(data.DataLoader(self.ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers, pin_memory=True))
+        self.opt = AdamW(diffusion_model.parameters(), lr=train_lr)
+        self.lr_scheduler = lr_scheduler.StepLR(self.opt, step_size=100, gamma=0.1)
 
         self.step = 0
 
@@ -589,21 +591,29 @@ class Trainer(object):
     def train(self):
 
         t1 = time()
-        while self.step < self.train_num_steps:
+        loop = tqdm(range(self.train_num_steps), disable= False)
+        for _ in loop:
+        # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
+                t1 = time()
                 data = next(self.dl).to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
                     data = next(self.dl).to(device=DEVICE)
+                t2 = time()
                 loss = self.model(data).sum()
                 t0 = time()
-                print(f'{self.step}: {loss.item()}, delta_t: {t0 - t1:.03f}')
-                t1 = time()
+                # if self.step % 100 == 0:
+                #     print(f'{self.step}: {loss.item()}, delta_t: {t0 - t1:.03f}, t_load: {t2 - t1:.03f}')
                 with open(str(self.logdir / 'loss.txt'), 'a') as df:
                     df.write(f'{self.step},{loss.item()}\n')
                 (loss / self.gradient_accumulate_every).backward()
+                # print(loss)
+                # print(loss.item())
+                loop.set_description(f'loss = {loss.item()}')
 
             self.opt.step()
+            self.lr_scheduler.step()
             self.opt.zero_grad()
 
             if self.step % self.update_ema_every == 0:
