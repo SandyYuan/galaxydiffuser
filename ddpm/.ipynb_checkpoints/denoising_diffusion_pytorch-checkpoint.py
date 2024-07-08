@@ -296,6 +296,9 @@ def cosine_beta_schedule(timesteps, s = 0.008):
     betas = 1 - (alphas_cumprod[1:] / alphas_cumprod[:-1])
     return np.clip(betas, a_min = 0, a_max = 0.999)
 
+def linear_beta_schedule(timesteps, beta_start = 0.0001, beta_end = 0.028):
+    return np.linspace(beta_start, beta_end, timesteps)
+
 class GaussianDiffusion(nn.Module):
     def __init__(
         self, 
@@ -315,7 +318,7 @@ class GaussianDiffusion(nn.Module):
         if betas is not None:
             betas = betas.detach().cpu().numpy() if isinstance(betas, torch.Tensor) else betas
         else:
-            betas = cosine_beta_schedule(timesteps)
+            betas = linear_beta_schedule(timesteps)
 
         alphas = 1. - betas
         alphas_cumprod = np.cumprod(alphas, axis=0)
@@ -558,7 +561,10 @@ class Trainer(object):
         self.ds = Galaxies(folder, image_size, minmaxnorms=(0, 255))
         self.dl = cycle(data.DataLoader(self.ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers, pin_memory=True))
         self.opt = AdamW(diffusion_model.parameters(), lr=train_lr)
-        self.lr_scheduler = lr_scheduler.StepLR(self.opt, step_size=100, gamma=0.1)
+        # self.lr_scheduler = lr_scheduler.StepLR(self.opt, step_size=100, gamma=0.7)
+        # self.lr_scheduler = lr_scheduler.OneCycleLR(self.opt, train_lr, total_steps = train_num_steps, pct_start = 0.08)
+        self.lr_scheduler = lr_scheduler.CyclicLR(self.opt, train_lr/1e4, train_lr, 
+            step_size_up = 500, step_size_down = 2500, mode = 'triangular', gamma = 0.6, scale_mode = 'cycle')
 
         self.step = 0
 
@@ -605,13 +611,13 @@ class Trainer(object):
                 t0 = time()
                 # if self.step % 100 == 0:
                 #     print(f'{self.step}: {loss.item()}, delta_t: {t0 - t1:.03f}, t_load: {t2 - t1:.03f}')
-                with open(str(self.logdir / 'loss.txt'), 'a') as df:
-                    df.write(f'{self.step},{loss.item()}\n')
+                # with open(str(self.logdir / 'loss.txt'), 'a') as df:
+                #     df.write(f'{self.step},{loss.item()}\n')
                 (loss / self.gradient_accumulate_every).backward()
                 # print(loss)
                 # print(loss.item())
                 loop.set_description(f'loss = {loss.item()}')
-                wandb.log({'loss': loss.item(), 'step': self.step})
+                wandb.log({'loss': loss.item(), 'step': self.step, 'lr': self.lr_scheduler.get_last_lr()[0]})
 
             self.opt.step()
             self.lr_scheduler.step()
@@ -620,8 +626,8 @@ class Trainer(object):
             if self.step % self.update_ema_every == 0:
                 self.step_ema()
 
-            if self.step % self.sample_every == 0:
-                batches = num_to_groups(18, self.batch_size)
+            if self.step % self.sample_every == 0 and self.step > 0:
+                batches = num_to_groups(8, self.batch_size)
                 all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n), batches))
                 all_images = torch.cat(all_images_list, dim=0)
                 all_images = (all_images + 1)/2
