@@ -523,8 +523,9 @@ class Trainer(object):
     def __init__(
         self,
         diffusion_model,
-        folder,
         *,
+        dl = None,
+        folder = None,
         ema_decay = 0.995,
         image_size = 256,
         train_batch_size = 32,
@@ -557,9 +558,13 @@ class Trainer(object):
 
         self.logdir = Path(logdir)
         self.logdir.mkdir(exist_ok = True)
-
-        self.ds = Galaxies(folder, image_size, minmaxnorms=(0, 255))
-        self.dl = cycle(data.DataLoader(self.ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers, pin_memory=True))
+        
+        if dl:
+            self.dl = cycle(dl)
+        else:
+            ds = Galaxies(folder, image_size, minmaxnorms=(0, 255))
+            self.dl = cycle(data.DataLoader(ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers, pin_memory=True))
+        
         self.opt = AdamW(diffusion_model.parameters(), lr=train_lr)
         # self.lr_scheduler = lr_scheduler.OneCycleLR(self.opt, train_lr, total_steps = train_num_steps, pct_start = 0.08)
         self.lr_scheduler = lr_scheduler.CyclicLR(self.opt, train_lr/1e4, train_lr, 
@@ -602,10 +607,10 @@ class Trainer(object):
         # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
                 t1 = time()
-                data = next(self.dl).to(device=DEVICE)
+                data = next(self.dl)['input'].to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
-                    data = next(self.dl).to(device=DEVICE)
+                    data = next(self.dl)['input'].to(device=DEVICE)
                 t2 = time()
                 loss = self.model(data).sum()
                 t0 = time()

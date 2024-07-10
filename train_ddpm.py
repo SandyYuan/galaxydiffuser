@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     trainer = Trainer(
         diffusion,
-        '/pscratch/sd/s/sihany/desiimages/',
+        folder = '/pscratch/sd/s/sihany/desiimages/',
         logdir = '/pscratch/sd/s/sihany/logs/desi/',
         image_size = 128,
         train_batch_size = 16,
