@@ -561,10 +561,10 @@ class Trainer(object):
         self.ds = Galaxies(folder, image_size, minmaxnorms=(0, 255))
         self.dl = cycle(data.DataLoader(self.ds, batch_size = train_batch_size, shuffle=True, num_workers=num_workers, pin_memory=True))
         self.opt = AdamW(diffusion_model.parameters(), lr=train_lr)
-        # self.lr_scheduler = lr_scheduler.StepLR(self.opt, step_size=100, gamma=0.7)
         # self.lr_scheduler = lr_scheduler.OneCycleLR(self.opt, train_lr, total_steps = train_num_steps, pct_start = 0.08)
         self.lr_scheduler = lr_scheduler.CyclicLR(self.opt, train_lr/1e4, train_lr, 
-            step_size_up = 500, step_size_down = 2500, mode = 'triangular', gamma = 0.6, scale_mode = 'cycle')
+            step_size_up = 1000, step_size_down = 3000, mode = 'triangular')
+        # self.lr_scheduler = lr_scheduler.CosineAnnealingWarmRestarts(self.opt, eta_min = train_lr/1e4)
 
         self.step = 0
 
