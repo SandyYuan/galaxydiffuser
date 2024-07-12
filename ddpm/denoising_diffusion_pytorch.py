@@ -191,7 +191,8 @@ class Unet(nn.Module):
         out_dim = None,
         dim_mults=(1, 2, 4, 8),
         groups = 8,
-        channels = 3
+        channels = 3,
+        dim_cond = 1
     ):
         super().__init__()
         self.channels = channels
@@ -206,6 +207,12 @@ class Unet(nn.Module):
             nn.Linear(dim * 4, dim)
         )
 
+        self.condition_embedding = nn.Sequential(
+            nn.Linear(dim_cond, dim * 2),
+            Mish(),
+            nn.Linear(dim * 2, dim)
+        )
+        
         self.downs = nn.ModuleList([])
         self.ups = nn.ModuleList([])
         num_resolutions = len(in_out)
@@ -242,8 +249,14 @@ class Unet(nn.Module):
         )
 
     def forward(self, x, time, condition = None):
+        print(time.shape, x.shape)
         t = self.time_pos_emb(time)
+        print(t.shape)
         t = self.mlp(t)
+        print(t.shape)
+        
+        cond_embed = self.condition_embedding(condition)
+        t += cond_embed
 
         h = []
 
@@ -607,10 +620,10 @@ class Trainer(object):
         # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
                 t1 = time()
-                data = next(self.dl)['input'].to(device=DEVICE)
+                data = next(self.dl)['image'].to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
-                    data = next(self.dl)['input'].to(device=DEVICE)
+                    data = next(self.dl)['image'].to(device=DEVICE)
                 t2 = time()
                 loss = self.model(data).sum()
                 t0 = time()
