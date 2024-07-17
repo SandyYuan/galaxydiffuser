@@ -192,7 +192,7 @@ class Unet(nn.Module):
         dim_mults=(1, 2, 4, 8),
         groups = 8,
         channels = 3,
-        dim_cond = 1
+        dim_cond = None
     ):
         super().__init__()
         self.channels = channels
@@ -206,12 +206,13 @@ class Unet(nn.Module):
             Mish(),
             nn.Linear(dim * 4, dim)
         )
-
-        self.condition_embedding = nn.Sequential(
-            nn.Linear(dim_cond, dim * 2),
-            Mish(),
-            nn.Linear(dim * 2, dim)
-        )
+        
+        if dim_cond: 
+            self.condition_embedding = nn.Sequential(
+                nn.Linear(dim_cond, dim * 2),
+                Mish(),
+                nn.Linear(dim * 2, dim)
+            )
         
         self.downs = nn.ModuleList([])
         self.ups = nn.ModuleList([])
@@ -249,14 +250,12 @@ class Unet(nn.Module):
         )
 
     def forward(self, x, time, condition = None):
-        print(time.shape, x.shape)
         t = self.time_pos_emb(time)
-        print(t.shape)
         t = self.mlp(t)
-        print(t.shape)
         
-        cond_embed = self.condition_embedding(condition)
-        t += cond_embed
+        if condition:
+            cond_embed = self.condition_embedding(condition)
+            t += cond_embed
 
         h = []
 
@@ -470,12 +469,16 @@ class GaussianDiffusion(nn.Module):
             extract(self.sqrt_one_minus_alphas_cumprod, t, x_start.shape) * noise
         )
 
-    def p_losses(self, x_start, t, noise = None):
+    def p_losses(self, x_start, t, noise = None, cond = None):
+        # print(x_start.shape, x_start)
         b, c, h, w = x_start.shape
         noise = default(noise, lambda: torch.randn_like(x_start))
 
         x_noisy = self.q_sample(x_start=x_start, t=t, noise=noise)
-        x_recon = self.denoise_fn(x_noisy, t)
+        if cond:
+            x_recon = self.denoise_fn(x_noisy, t, condition = cond)
+        else:
+            x_recon = self.denoise_fn(x_noisy, t)
 
         if self.loss_type == 'l1':
             loss = (noise - x_recon).abs().mean()
@@ -553,6 +556,7 @@ class Trainer(object):
         save_every = 5000,
         sample_every = 5000,
         logdir = './logs',
+        cond = False,
     ):
         super().__init__()
         self.model = torch.nn.DataParallel(diffusion_model, device_ids = [0])
@@ -571,6 +575,8 @@ class Trainer(object):
 
         self.logdir = Path(logdir)
         self.logdir.mkdir(exist_ok = True)
+        
+        self.cond = cond
         
         if dl:
             self.dl = cycle(dl)
@@ -620,12 +626,21 @@ class Trainer(object):
         # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
                 t1 = time()
-                data = next(self.dl)['image'].to(device=DEVICE)
+                ele = next(self.dl)
+                data = ele['image'].to(device=DEVICE)
+                if self.cond:
+                    cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
-                    data = next(self.dl)['image'].to(device=DEVICE)
+                    ele = next(self.dl)
+                    data = ele['image'].to(device=DEVICE)
+                    if self.cond:
+                        cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(device=DEVICE)
                 t2 = time()
-                loss = self.model(data).sum()
+                if self.cond: 
+                    loss = self.model(data, cond = cond).sum()
+                else:
+                    loss = self.model(data).sum()
                 t0 = time()
                 # if self.step % 100 == 0:
                 #     print(f'{self.step}: {loss.item()}, delta_t: {t0 - t1:.03f}, t_load: {t2 - t1:.03f}')

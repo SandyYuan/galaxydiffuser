@@ -64,6 +64,6 @@ if __name__ == "__main__":
         # rank = [0, 1, 2]
     )
 
-    trainer.load(120000)
+    trainer.load(210000)
 
     trainer.train()
