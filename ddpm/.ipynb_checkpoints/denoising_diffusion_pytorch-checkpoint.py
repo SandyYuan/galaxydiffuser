@@ -253,7 +253,7 @@ class Unet(nn.Module):
         t = self.time_pos_emb(time)
         t = self.mlp(t)
         
-        if condition:
+        if condition is not None:
             cond_embed = self.condition_embedding(condition)
             t += cond_embed
 
@@ -475,7 +475,7 @@ class GaussianDiffusion(nn.Module):
         noise = default(noise, lambda: torch.randn_like(x_start))
 
         x_noisy = self.q_sample(x_start=x_start, t=t, noise=noise)
-        if cond:
+        if cond is not None:
             x_recon = self.denoise_fn(x_noisy, t, condition = cond)
         else:
             x_recon = self.denoise_fn(x_noisy, t)
@@ -629,13 +629,13 @@ class Trainer(object):
                 ele = next(self.dl)
                 data = ele['image'].to(device=DEVICE)
                 if self.cond:
-                    cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(device=DEVICE)
+                    cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
                     ele = next(self.dl)
                     data = ele['image'].to(device=DEVICE)
                     if self.cond:
-                        cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(device=DEVICE)
+                        cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                 t2 = time()
                 if self.cond: 
                     loss = self.model(data, cond = cond).sum()
