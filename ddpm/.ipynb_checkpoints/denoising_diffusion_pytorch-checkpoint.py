@@ -385,8 +385,11 @@ class GaussianDiffusion(nn.Module):
         posterior_log_variance_clipped = extract(self.posterior_log_variance_clipped, t, x_t.shape)
         return posterior_mean, posterior_variance, posterior_log_variance_clipped
 
-    def p_mean_variance(self, x, t, clip_denoised: bool):
-        x_recon = self.predict_start_from_noise(x, t=t, noise=self.denoise_fn(x, t))
+    def p_mean_variance(self, x, t, clip_denoised: bool, cond = None):
+        if cond is not None:
+            x_recon = self.predict_start_from_noise(x, t=t, noise=self.denoise_fn(x, t, condition = cond))
+        else:
+            x_recon = self.predict_start_from_noise(x, t=t, noise=self.denoise_fn(x, t))
 
         if clip_denoised:
             x_recon.clamp_(-1., 1.)
@@ -395,30 +398,39 @@ class GaussianDiffusion(nn.Module):
         return model_mean, posterior_variance, posterior_log_variance
 
     @torch.no_grad()
-    def p_sample(self, x, t, clip_denoised=True, repeat_noise=False):
+    def p_sample(self, x, t, clip_denoised=True, repeat_noise=False, cond = None):
         b, *_, device = *x.shape, x.device
-        model_mean, _, model_log_variance = self.p_mean_variance(x=x, t=t, clip_denoised=clip_denoised)
+        # print("yo")
+        # print(cond)
+        model_mean, _, model_log_variance = self.p_mean_variance(x=x, t=t, clip_denoised=clip_denoised, cond = cond)
         noise = noise_like(x.shape, device, repeat_noise)
         # no noise when t == 0
         nonzero_mask = (1 - (t == 0).float()).reshape(b, *((1,) * (len(x.shape) - 1)))
         return model_mean + nonzero_mask * (0.5 * model_log_variance).exp() * noise
 
     @torch.no_grad()
-    def p_sample_loop(self, shape):
+    def p_sample_loop(self, shape, cond = None):
         device = self.betas.device
 
         b = shape[0]
         img = torch.randn(shape, device=device)
 
         for i in tqdm(reversed(range(0, self.num_timesteps)), desc='sampling loop time step', total=self.num_timesteps, leave=True, position=0):
-            img = self.p_sample(img, torch.full((b,), i, device=device, dtype=torch.long))
+            img = self.p_sample(img, torch.full((b,), i, device=device, dtype=torch.long), cond = cond)
         return img
 
     @torch.no_grad()
-    def sample(self, image_size, batch_size = 16):
+    def sample(self, image_size, batch_size = 16, cond = None):
         image_size = self.image_size
         channels = self.channels
-        return self.p_sample_loop((batch_size, channels, image_size, image_size))
+        if cond == 'set':
+            conditioning = torch.zeros(batch_size, 3)
+            conditioning[:, 0] = 0.1
+            conditioning[:, 1] = 10.5
+            conditioning = conditioning.to(torch.float32).to(device=DEVICE)
+        else:
+            conditioning = cond
+        return self.p_sample_loop((batch_size, channels, image_size, image_size), cond = conditioning)
 
     @torch.no_grad()
     def interpolate(self, x1, x2, t = None, lam = 0.5):
@@ -629,16 +641,16 @@ class Trainer(object):
                 ele = next(self.dl)
                 data = ele['image'].to(device=DEVICE)
                 if self.cond:
-                    cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                    condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
                     ele = next(self.dl)
                     data = ele['image'].to(device=DEVICE)
                     if self.cond:
-                        cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                        condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                 t2 = time()
                 if self.cond: 
-                    loss = self.model(data, cond = cond).sum()
+                    loss = self.model(data, cond = condition).sum()
                 else:
                     loss = self.model(data).sum()
                 t0 = time()
@@ -659,9 +671,12 @@ class Trainer(object):
             if self.step % self.update_ema_every == 0:
                 self.step_ema()
 
-            if self.step % self.sample_every == 0 and self.step > 0:
-                batches = num_to_groups(8, self.batch_size)
-                all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n), batches))
+            if self.step % self.sample_every == 0: #  and self.step > 0:
+                batches = num_to_groups(8, self.batch_size)                
+                # if self.cond:
+                #     cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                    
+                all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n, cond = 'set'), batches))
                 all_images = torch.cat(all_images_list, dim=0)
                 all_images = (all_images + 1)/2
                 all_images = torch.flip(all_images, dims=[1])*255 # map channels correctly for imout
