@@ -1,3 +1,3 @@
 # Conditional galaxy image generator
 
-based off of an unconditional ddpm model 
+Generating realistic galaxy images given redshift and galaxy properties. There is both an unconditional model using huggingface diffusers, and a conditional model using a unet-based ddpm. 
