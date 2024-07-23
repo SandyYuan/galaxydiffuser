@@ -68,7 +68,7 @@ if __name__ == "__main__":
     wandb.init()
     
     model = Unet(
-        dim = 64,
+        dim = 128,
         dim_mults = (1, 1, 2, 2, 2, 4, 4, 4),
         dim_cond = 3
     ).to(device=DEVICE)
