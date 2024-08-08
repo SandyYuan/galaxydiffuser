@@ -400,8 +400,6 @@ class GaussianDiffusion(nn.Module):
     @torch.no_grad()
     def p_sample(self, x, t, clip_denoised=True, repeat_noise=False, cond = None):
         b, *_, device = *x.shape, x.device
-        # print("yo")
-        # print(cond)
         model_mean, _, model_log_variance = self.p_mean_variance(x=x, t=t, clip_denoised=clip_denoised, cond = cond)
         noise = noise_like(x.shape, device, repeat_noise)
         # no noise when t == 0
@@ -481,14 +479,15 @@ class GaussianDiffusion(nn.Module):
             extract(self.sqrt_one_minus_alphas_cumprod, t, x_start.shape) * noise
         )
 
-    def p_losses(self, x_start, t, noise = None, cond = None):
+    def p_losses(self, x_start, t, noise = None, cond = None, smoothz = False, alpha = 0.1):
         # print(x_start.shape, x_start)
         b, c, h, w = x_start.shape
+        # rstate = torch.get_rng_state()
         noise = default(noise, lambda: torch.randn_like(x_start))
 
         x_noisy = self.q_sample(x_start=x_start, t=t, noise=noise)
         if cond is not None:
-            x_recon = self.denoise_fn(x_noisy, t, condition = cond)
+            x_recon = self.denoise_fn(x_noisy, t, condition = cond) # just add a delta z term here
         else:
             x_recon = self.denoise_fn(x_noisy, t)
 
@@ -496,6 +495,11 @@ class GaussianDiffusion(nn.Module):
             loss = (noise - x_recon).abs().mean()
         elif self.loss_type == 'l2':
             loss = F.mse_loss(noise, x_recon)
+            if smoothz:
+                deltaz = torch.zeros(cond.shape[1])
+                deltaz[0] = 0.01
+                x_recon1 = self.denoise_fn(x_noisy, t, condition = cond+deltaz.to(device=DEVICE))
+                loss += alpha*F.mse_loss(x_recon1, x_recon)
         else:
             raise NotImplementedError()
 
@@ -569,6 +573,8 @@ class Trainer(object):
         sample_every = 5000,
         logdir = './logs',
         cond = False,
+        smoothz = False,
+        alpha = 0.1,
     ):
         super().__init__()
         self.model = torch.nn.DataParallel(diffusion_model, device_ids = [0])
@@ -589,6 +595,8 @@ class Trainer(object):
         self.logdir.mkdir(exist_ok = True)
         
         self.cond = cond
+        self.smoothz = smoothz
+        self.alpha = alpha # nn.Parameter(alpha)
         
         if dl:
             self.dl = cycle(dl)
@@ -650,7 +658,7 @@ class Trainer(object):
                         condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                 t2 = time()
                 if self.cond: 
-                    loss = self.model(data, cond = condition).sum()
+                    loss = self.model(data, cond = condition, smoothz = self.smoothz, alpha = self.alpha).sum()
                 else:
                     loss = self.model(data).sum()
                 t0 = time()
