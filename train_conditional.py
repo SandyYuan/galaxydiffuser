@@ -83,7 +83,7 @@ if __name__ == "__main__":
     trainer = Trainer(
         diffusion,
         dl = dl,
-        logdir = '/pscratch/sd/s/sihany/logs/desi_cond_smooth_alpha0p001/',
+        logdir = '/pscratch/sd/s/sihany/logs/desi_cond_smooth_alpha0p4/',
         image_size = 128,
         train_batch_size = 16,
         train_lr = 1e-4,
@@ -96,9 +96,9 @@ if __name__ == "__main__":
         num_workers=16,
         cond = True,
         smoothz = True,
-        alpha = 0.001
+        alpha = 0.4
     )
 
-    trainer.load(60000)
+    # trainer.load(60000)
 
     trainer.train()
