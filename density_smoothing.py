@@ -7,17 +7,17 @@ from scipy.spatial import cKDTree
 def triangular_kernel(r, l):
     return np.maximum(0, 1 - r/l)
 
-def smooth_density_chunk(chunk, positions, l, grid_shape, grid_min, grid_max):
+def smooth_density_chunk(chunk, positions, l, grid_min, grid_max):
     tree = cKDTree(positions)
-    densities = np.zeros(grid_shape)
+    densities = np.zeros(chunk.shape[:-1])
     
-    for i, j, k in np.ndindex(chunk.shape):
-        point = chunk[i, j, k]
+    for idx in np.ndindex(chunk.shape[:-1]):
+        point = chunk[idx]
         neighbors = tree.query_ball_point(point, l)
         if neighbors:
             r = np.linalg.norm(positions[neighbors] - point, axis=1)
             weights = triangular_kernel(r, l)
-            densities[i, j, k] = np.sum(weights)
+            densities[idx] = np.sum(weights)
     
     return densities
 
@@ -48,10 +48,10 @@ def smooth_density(positions, l, grid_shape, n_jobs=-1):
     # Use multiprocessing to parallelize the computation
     with mp.Pool(n_jobs) as pool:
         results = pool.starmap(smooth_density_chunk, 
-                               [(chunk, positions, l, chunk.shape, grid_min, grid_max) for chunk in chunks])
+                               [(chunk, positions, l, grid_min, grid_max) for chunk in chunks])
     
     # Combine results
-    densities = np.concatenate(results, axis=0)
+    densities = np.concatenate(results)
     
     return densities
 
