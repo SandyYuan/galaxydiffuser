@@ -12,6 +12,7 @@ from torch.optim import AdamW, lr_scheduler
 from torchvision import transforms, utils
 from astropy.io import fits
 from PIL import Image
+import torch.nn.utils as nn_utils
 
 import numpy as np
 from tqdm import tqdm
@@ -495,6 +496,8 @@ class GaussianDiffusion(nn.Module):
             loss = (noise - x_recon).abs().mean()
         elif self.loss_type == 'l2':
             loss = F.mse_loss(noise, x_recon)
+            if torch.isnan(loss):
+                print("NaN detected in loss!", noise, x_recon)
             if smoothz:
                 deltaz = torch.zeros(cond.shape[1])
                 deltaz[0] = 0.01
@@ -646,16 +649,19 @@ class Trainer(object):
         # while self.step < self.train_num_steps:
             for i in range(self.gradient_accumulate_every):
                 t1 = time()
-                ele = next(self.dl)
-                data = ele['image'].to(device=DEVICE)
+                ele_im, ele_prop = next(self.dl)
+                # data = ele['image'].to(device=DEVICE)
+                data = ele_im
                 if self.cond:
-                    condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                    # condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                    condition = ele_prop.to(torch.float32).to(device=DEVICE)
                 while torch.any(~torch.isfinite(data)):
                     print("NAN DETECTED!!")
-                    ele = next(self.dl)
-                    data = ele['image'].to(device=DEVICE)
+                    ele_im, ele_prorp = next(self.dl)
+                    # data = ele['image'].to(device=DEVICE)
                     if self.cond:
-                        condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                        # condition = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
+                        condition = ele_prop.to(torch.float32).to(device=DEVICE)
                 t2 = time()
                 if self.cond: 
                     loss = self.model(data, cond = condition, smoothz = self.smoothz, alpha = self.alpha).sum()
@@ -667,6 +673,11 @@ class Trainer(object):
                 # with open(str(self.logdir / 'loss.txt'), 'a') as df:
                 #     df.write(f'{self.step},{loss.item()}\n')
                 (loss / self.gradient_accumulate_every).backward()
+                
+                # Gradient clipping
+                nn_utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)  # Adjust max_norm value as needed
+
+            
                 # print(loss)
                 # print(loss.item())
                 loop.set_description(f'loss = {loss.item()}')
@@ -684,7 +695,9 @@ class Trainer(object):
                 # if self.cond:
                 #     cond = torch.column_stack([ele['spec_z'], ele['mass_inf_photoz'], ele['sfr_inf_photoz']]).to(torch.float32).to(device=DEVICE)
                     
-                all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n, cond = 'set'), batches))
+                ele_im, ele_prop = next(self.dl)
+                all_images_list = list(map(lambda n: self.ema_model.module.sample(self.image_size, batch_size=n, 
+                                                    cond = ele_prop.to(torch.float32).to(device=DEVICE)), batches))
                 all_images = torch.cat(all_images_list, dim=0)
                 all_images = (all_images + 1)/2
                 all_images = torch.flip(all_images, dims=[1])*255 # map channels correctly for imout

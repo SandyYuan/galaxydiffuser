@@ -1,0 +1,7 @@
+.aider*
+data/
+old/
+UNCOVER_mosaics_scripts/
+unfinished/
+wandb/
+__pycache__/
